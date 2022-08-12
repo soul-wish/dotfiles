@@ -1,0 +1,12 @@
+[aws]
+disabled = true
+[cmake]
+disabled = true
+[cobol]
+disabled = true
+[nodejs]
+disabled = true
+[php]
+disabled = true
+[package]
+disabled = true
