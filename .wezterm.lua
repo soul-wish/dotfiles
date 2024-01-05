@@ -59,6 +59,17 @@ config.window_padding = {
 --Fonts
 config.font = wezterm.font("CaskaydiaCove NF")
 config.font_size = 16
+-- Background
+config.background = {
+	{
+		source = {
+			File = "/Users/soulwish/Downloads/wezterm_bg.jpg",
+		},
+		hsb = {
+			brightness = 0.02,
+		},
+	},
+}
 -- Keybindings
 config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
