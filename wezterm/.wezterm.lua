@@ -64,7 +64,7 @@ config.font_size = 16
 config.background = {
 	{
 		source = {
-			File = "/Users/soulwish/Downloads/wezterm_bg.jpg",
+			File = "/Users/soulwish/Downloads/wallhaven-572k81.png",
 		},
 		hsb = {
 			brightness = 0.02,
