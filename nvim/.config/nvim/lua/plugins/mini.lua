@@ -15,6 +15,27 @@ return { -- Collection of various small independent plugins/modules
 		-- - sd'   - [S]urround [D]elete [']quotes
 		-- - sr)'  - [S]urround [R]eplace [)] [']
 		require("mini.surround").setup()
+		require("mini.indentscope").setup({
+			symbol = "│",
+			options = { try_as_border = true },
+		})
 		--  Check out: https://github.com/echasnovski/mini.nvim
+	end,
+	init = function()
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = {
+				"dashboard",
+				"fzf",
+				"help",
+				"mason",
+				"neo-tree",
+				"notify",
+				"Trouble",
+				"trouble",
+			},
+			callback = function()
+				vim.b.miniindentscope_disable = true
+			end,
+		})
 	end,
 }
