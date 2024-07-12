@@ -22,11 +22,12 @@ return {
 				header = vim.split(logo, "\n"),
       -- stylua: ignore
       center = {
-        { action = "Telescope find_files",                                    desc = " Find File",       icon = " ", key = "f" },
+        { action = "Telescope find_files",                                     desc = " Find File",       icon = " ", key = "f" },
         { action = "ene | startinsert",                                        desc = " New File",        icon = " ", key = "n" },
         { action = "Telescope oldfiles",                                       desc = " Recent Files",    icon = " ", key = "r" },
         { action = "Telescope live_grep",                                      desc = " Find Text",       icon = " ", key = "g" },
         { action = 'lua require("persistence").load()',                        desc = " Restore Session", icon = " ", key = "s" },
+        { action = 'Lazy',                                                     desc = " Lazy Updates",    icon = "󰒲 ", key = "l" },
         { action = "qa",                                                       desc = " Quit",            icon = " ", key = "q" },
       },
 				footer = function()
