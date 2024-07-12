@@ -61,16 +61,16 @@ config.window_padding = {
 config.font = wezterm.font("CaskaydiaCove NF")
 config.font_size = 16
 -- Background
-config.background = {
-	{
-		source = {
-			File = "/Users/soulwish/Downloads/wallhaven-572k81.png",
-		},
-		hsb = {
-			brightness = 0.02,
-		},
-	},
-}
+-- config.background = {
+-- 	{
+-- 		source = {
+-- 			File = "/Users/soulwish/Downloads/wallhaven-572k81.png",
+-- 		},
+-- 		hsb = {
+-- 			brightness = 0.02,
+-- 		},
+-- 	},
+-- }
 -- Keybindings
 config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
