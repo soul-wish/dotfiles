@@ -4,7 +4,7 @@ return {
 		branch = "master",
 		init = function()
 			vim.g.VM_maps = {
-				["Find Under"] = "<C-d>",
+				["Find Under"] = "<C-m>",
 			}
 		end,
 	},
