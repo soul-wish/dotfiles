@@ -1,10 +1,11 @@
 return {
 	"rcarriga/nvim-notify",
 	opts = {
+		render = "simple",
 		top_down = false,
-		stages = "fade_in_slide_out",
+		stages = "fade",
 	},
-	config = function()
+	init = function()
 		--Enable fancy notifications
 		vim.notify = require("notify")
 	end,
