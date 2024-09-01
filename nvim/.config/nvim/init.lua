@@ -78,8 +78,8 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
-vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show [d]iagnostic error messages" })
+vim.keymap.set("n", "<leader>l", vim.diagnostic.setloclist, { desc = "Open diagnostic quickfix [l]ist" })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -105,6 +105,10 @@ vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit All" })
 -- Delete buffer
 vim.keymap.set("n", "<leader>bd", "<cmd>bd<cr>", { desc = "Delete Buffer" })
 
+vim.keymap.set("n", "<leader>wb", "<C-W>s", { desc = "Split Window Below", remap = true })
+vim.keymap.set("n", "<leader>wr", "<C-W>v", { desc = "Split Window Right", remap = true })
+vim.keymap.set("n", "<leader>wd", "<C-W>c", { desc = "Delete Window", remap = true })
+
 -- Move Lines
 vim.keymap.set("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move Down" })
 vim.keymap.set("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move Up" })
@@ -112,6 +116,13 @@ vim.keymap.set("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
 vim.keymap.set("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
 vim.keymap.set("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move Down" })
 vim.keymap.set("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move Up" })
+
+-- Increment/decrement
+vim.keymap.set("n", "+", "<C-a>", { desc = "Increment numbers" })
+vim.keymap.set("n", "-", "<C-x>", { desc = "Decrement numbers" })
+
+-- Select all
+vim.keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select all" })
 
 -- [[ Basic Autocommands ]] Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd("TextYankPost", {
