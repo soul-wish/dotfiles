@@ -52,14 +52,14 @@ config.window_decorations = "RESIZE"
 config.integrated_title_button_style = "MacOsNative"
 -- Window Padding
 config.window_padding = {
-	top = 20,
+	top = 0,
 	right = 0,
 	bottom = 0,
 	left = 0,
 }
 --Fonts
 config.font = wezterm.font("CaskaydiaCove NF")
-config.font_size = 16
+config.font_size = 17
 -- Background
 -- config.background = {
 -- 	{
