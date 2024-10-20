@@ -9,7 +9,7 @@ return {
 	},
 	opts = {
 		window = {
-			position = "right",
+			position = "float",
 		},
 	},
 	keys = {
