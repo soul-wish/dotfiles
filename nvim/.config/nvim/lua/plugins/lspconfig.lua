@@ -182,6 +182,12 @@ return { -- LSP Configuration & Plugins
 					},
 				},
 			},
+			solidity_ls = {
+				md = { "nomicfoundation-solidity-language-server", "--stdio" },
+				filetypes = { "solidity" },
+				root_dir = require("lspconfig.util").find_git_ancestor,
+				single_file_support = true,
+			},
 		}
 
 		-- Ensure the servers and tools above are installed
