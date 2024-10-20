@@ -62,6 +62,8 @@ vim.opt.autoindent = true
 
 -- Set tab width to 2
 vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
 vim.opt.expandtab = true -- Use spaces instead of tabs
 
 -- Minimal number of screen lines to keep above and below the cursor.
