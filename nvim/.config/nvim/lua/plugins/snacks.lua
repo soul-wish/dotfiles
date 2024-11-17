@@ -3,7 +3,17 @@ return {
 	priority = 1000,
 	lazy = false,
 	opts = {
-		win = { enabled = false },
+		bigfile = { enabled = true },
+		bufdelete = { enabled = true },
+		git = { enabled = true },
+		gitbrowse = { enabled = true },
+		lazygit = { enabled = true },
+		notifier = { enabled = true },
+		quickfile = { enabled = true },
+		rename = { enabled = true },
+		terminal = { enabled = true },
+		toggle = { enabled = true },
+		words = { enabled = true },
 	},
 	keys = {
 		{
