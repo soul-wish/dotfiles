@@ -99,10 +99,10 @@ vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower win
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
 -- Resize window
-vim.keymap.set("n", "<C-w><left>", "5<C-w><", { desc = "Resize window" })
-vim.keymap.set("n", "<C-w><right>", "5<C-w>>", { desc = "Resize window" })
-vim.keymap.set("n", "<C-w><up>", "5<C-w>+", { desc = "Resize window" })
-vim.keymap.set("n", "<C-w><down>", "5<C-w>-", { desc = "Resize window" })
+vim.keymap.set("n", "<C-w><left>", "10<C-w><", { desc = "Resize window" })
+vim.keymap.set("n", "<C-w><right>", "10<C-w>>", { desc = "Resize window" })
+vim.keymap.set("n", "<C-w><up>", "10<C-w>+", { desc = "Resize window" })
+vim.keymap.set("n", "<C-w><down>", "10<C-w>-", { desc = "Resize window" })
 
 -- Save file
 vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
