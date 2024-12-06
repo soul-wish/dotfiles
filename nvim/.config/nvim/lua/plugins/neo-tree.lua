@@ -11,8 +11,22 @@ return {
 		window = {
 			position = "float",
 		},
+		filesystem = {
+			filtered_items = {
+				hide_dotfiles = false,
+				hide_gitignored = false,
+			},
+			follow_current_file = {
+				enabled = true,
+			},
+		},
+		buffers = {
+			follow_current_file = {
+				enabled = true,
+			},
+		},
 	},
 	keys = {
-		{ "<leader>e", "<cmd>Neotree toggle<cr>", desc = "Toggle NeoTree" },
+		{ "<leader>e", "<cmd>Neotree toggle reveal<cr>", desc = "Toggle NeoTree" },
 	},
 }
