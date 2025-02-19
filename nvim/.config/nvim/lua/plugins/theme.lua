@@ -3,12 +3,8 @@ return {
 		"rose-pine/neovim",
 		name = "rose-pine",
 		priority = 1000,
-		setup = function()
-			require("rose-pine").setup({
-				variant = "moon",
-			})
-		end,
-		init = function()
+		setup = function() end,
+		config = function()
 			vim.cmd("colorscheme rose-pine-moon")
 		end,
 	},
