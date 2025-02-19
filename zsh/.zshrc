@@ -108,12 +108,16 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="/Applications/nvim/bin/nvim"
 alias v="/Applications/nvim/bin/nvim"
+alias w="/Users/soulwish/.codeium/windsurf/bin/windsurf"
 
 unsetopt PROMPT_SP
 
 # pnpm
 export PNPM_HOME="/Users/soulwish/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
 # pnpm end
 
 # Brew
@@ -144,3 +148,6 @@ setopt hist_find_no_dups
 
 # Enable fzf
 source <(fzf --zsh)
+
+# Added by Windsurf
+export PATH="/Users/soulwish/.codeium/windsurf/bin:$PATH"
