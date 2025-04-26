@@ -1,6 +1,7 @@
 return {
 	{
 		"saghen/blink.cmp",
+		event = "VimEnter",
 		-- optional: provides snippets for the snippet source
 		dependencies = "rafamadriz/friendly-snippets",
 
@@ -34,6 +35,9 @@ return {
 			},
 
 			fuzzy = { implementation = "prefer_rust_with_warning" },
+
+			-- Shows a signature help window while you type arguments for a function
+			signature = { enabled = true },
 		},
 		-- allows extending the providers array elsewhere in your config
 		-- without having to redefine it
