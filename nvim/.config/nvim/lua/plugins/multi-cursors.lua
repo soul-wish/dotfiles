@@ -21,9 +21,9 @@ return {
 		end)
 
 		-- Add and remove cursors with control + left click.
-		set("youn", "yest<c-leftmouse>", mc.handleMouse)
-		set("youn", "yest<c-leftdrag>", mc.handleMouseDrag)
-		set("youn", "yest<c-leftrelease>", mc.handleMouseRelease)
+		set("n", "<c-leftmouse>", mc.handleMouse)
+		set("n", "<c-leftdrag>", mc.handleMouseDrag)
+		set("n", "<c-leftrelease>", mc.handleMouseRelease)
 
 		-- Mappings defined in a keymap layer only apply when there are
 		-- multiple cursors. This lets you have overlapping mappings.
