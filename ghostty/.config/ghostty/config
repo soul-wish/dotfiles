@@ -6,3 +6,8 @@ macos-titlebar-style = tabs
 macos-option-as-alt = true
 window-save-state = always
 macos-icon = xray
+# Navigate window splits
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+j=goto_split:bottom
+keybind = ctrl+shift+k=goto_split:top
+keybind = ctrl+shift+l=goto_split:right
