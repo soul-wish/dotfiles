@@ -4,25 +4,9 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	-- or if using mini.icons/mini.nvim
 	-- dependencies = { "echasnovski/mini.icons" },
-	opts = {
-		grep = {
-			file_ignore_patterns = {
-				"node_modules/.*",
-				"logs/.*",
-				".*/package%-lock%.json$",
-				".*/yarn%.lock$",
-				".*/pnpm%-lock%.yaml$",
-			},
-		},
-	},
 	keys = {
 		{ "<c-j>", "<c-j>", ft = "fzf", mode = "t", nowait = true },
 		{ "<c-k>", "<c-k>", ft = "fzf", mode = "t", nowait = true },
-		{
-			"<leader>,",
-			"<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>",
-			desc = "Switch Buffer",
-		},
 		{ "<leader>sg", "<cmd>FzfLua live_grep<cr>", desc = "Grep (Root Dir)" },
 		{ "<leader>:", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
 		-- { "<leader><space>", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
