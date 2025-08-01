@@ -4,6 +4,17 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	-- or if using mini.icons/mini.nvim
 	-- dependencies = { "echasnovski/mini.icons" },
+	opts = {
+		grep = {
+			file_ignore_patterns = {
+				"node_modules/.*",
+				"logs/.*",
+				".*/package%-lock%.json$",
+				".*/yarn%.lock$",
+				".*/pnpm%-lock%.yaml$",
+			},
+		},
+	},
 	keys = {
 		{ "<c-j>", "<c-j>", ft = "fzf", mode = "t", nowait = true },
 		{ "<c-k>", "<c-k>", ft = "fzf", mode = "t", nowait = true },
