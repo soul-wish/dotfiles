@@ -8,3 +8,5 @@ format = "[$symbol]($style)"
 format = "[$symbol]($style)"
 [lua]
 format = "[$symbol]($style)"
+[aws]
+disabled = true
