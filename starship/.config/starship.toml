@@ -10,3 +10,5 @@ format = "[$symbol]($style)"
 format = "[$symbol]($style)"
 [aws]
 disabled = true
+[package]
+disabled = true
