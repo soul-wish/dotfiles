@@ -16,6 +16,14 @@ return {
 			--- @type avante.SelectorProvider
 			provider = "fzf_lua",
 		},
+		behaviour = {
+			enable_token_counting = false,
+		},
+		windows = {
+			input = {
+				height = 10,
+			},
+		},
 	},
 	dependencies = {
 		"nvim-lua/plenary.nvim",
