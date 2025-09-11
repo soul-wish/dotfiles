@@ -25,6 +25,9 @@ return {
 				height = 10,
 			},
 		},
+		selection = {
+			hint_display = "none",
+		},
 	},
 	dependencies = {
 		"nvim-lua/plenary.nvim",
