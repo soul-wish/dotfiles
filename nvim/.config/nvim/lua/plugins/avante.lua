@@ -33,7 +33,18 @@ return {
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
 		--- The below dependencies are optional,
-		"zbirenbaum/copilot.lua", -- for providers='copilot'
+		{
+			"zbirenbaum/copilot.lua",
+			opts = {
+				suggestion = {
+					auto_trigger = true,
+					keymap = {
+						accept = "<Tab>",
+					},
+				},
+			},
+			event = "InsertEnter",
+		}, -- for providers='copilot'
 		{
 			-- Make sure to set this up properly if you have lazy=true
 			"MeanderingProgrammer/render-markdown.nvim",
