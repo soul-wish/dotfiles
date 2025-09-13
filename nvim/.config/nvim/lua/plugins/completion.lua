@@ -5,6 +5,7 @@ return {
 		-- optional: provides snippets for the snippet source
 		dependencies = {
 			"rafamadriz/friendly-snippets",
+			"olimorris/codecompanion.nvim",
 			-- "Kaiser-Yang/blink-cmp-avante",
 		},
 
@@ -32,7 +33,7 @@ return {
 			-- default list of enabled providers defined so that you can extend it
 			-- elsewhere in your config, without redefining it, via `opts_extend`
 			sources = {
-				default = { "lsp", "path", "snippets", "buffer" },
+				default = { "lsp", "path", "snippets", "buffer", "codecompanion" },
 				-- default = { "avante", "lsp", "path", "snippets", "buffer" },
 				-- providers = {
 				-- 	avante = {
