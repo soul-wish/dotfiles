@@ -5,19 +5,13 @@ return {
 	},
 	keys = {
 		{
-			"<Leader>ap",
-			"<cmd>CodeCompanionActions<CR>",
-			desc = "Open the action palette",
-			mode = { "n", "v" },
-		},
-		{
-			"<Leader>a",
+			"<Leader>at",
 			"<cmd>CodeCompanionChat Toggle<CR>",
 			desc = "Toggle a chat buffer",
 			mode = { "n" },
 		},
 		{
-			"<LocalLeader>a",
+			"<LocalLeader>ac",
 			"<cmd>CodeCompanionChat Add<CR>",
 			desc = "Add code to a chat buffer",
 			mode = { "v" },
