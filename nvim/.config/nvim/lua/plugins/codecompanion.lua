@@ -5,6 +5,12 @@ return {
 	},
 	keys = {
 		{
+			"<Leader>an",
+			"<cmd>CodeCompanionChat<CR>",
+			desc = "New chat buffer",
+			mode = { "n" },
+		},
+		{
 			"<Leader>at",
 			"<cmd>CodeCompanionChat Toggle<CR>",
 			desc = "Toggle a chat buffer",
