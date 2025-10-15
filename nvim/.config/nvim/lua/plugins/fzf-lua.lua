@@ -11,7 +11,7 @@ return {
 		-- find
 		{ "<leader>sg", "<cmd>FzfLua live_grep<cr>", desc = "Grep (Root Dir)" },
 		{ "<leader>:", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
-		{ "<leader><space>", "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>", desc = "Find Buffers" },
+		{ "<leader><space>", "<cmd>FzfLua buffers sort_lastused=true<cr>", desc = "Find Buffers" },
 		{ "<leader>sf", "<cmd>FzfLua files<cr>", desc = "Find Files (Root Dir)" },
 		{ "<leader>fg", "<cmd>FzfLua git_files<cr>", desc = "Find Files (git-files)" },
 		{ "<leader>fr", "<cmd>FzfLua oldfiles<cr>", desc = "Recent" },
@@ -19,14 +19,12 @@ return {
 		{ "<leader>gc", "<cmd>FzfLua git_commits<CR>", desc = "Commits" },
 		{ "<leader>gs", "<cmd>FzfLua git_status<CR>", desc = "Status" },
 		-- search
-		{ '<leader>s"', "<cmd>FzfLua registers<cr>", desc = "Registers" },
 		{ "<leader>sb", "<cmd>FzfLua grep_curbuf<cr>", desc = "Buffer" },
 		{ "<leader>sC", "<cmd>FzfLua commands<cr>", desc = "Commands" },
 		{ "<leader>sd", "<cmd>FzfLua diagnostics_document<cr>", desc = "Document Diagnostics" },
 		{ "<leader>sD", "<cmd>FzfLua diagnostics_workspace<cr>", desc = "Workspace Diagnostics" },
 		{ "<leader>sj", "<cmd>FzfLua jumps<cr>", desc = "Jumplist" },
 		{ "<leader>sk", "<cmd>FzfLua keymaps<cr>", desc = "Key Maps" },
-		{ "<leader>sl", "<cmd>FzfLua loclist<cr>", desc = "Location List" },
 		{ "<leader>sM", "<cmd>FzfLua man_pages<cr>", desc = "Man Pages" },
 		{ "<leader>sm", "<cmd>FzfLua marks<cr>", desc = "Jump to Mark" },
 		{ "<leader>sR", "<cmd>FzfLua resume<cr>", desc = "Resume Search" },
