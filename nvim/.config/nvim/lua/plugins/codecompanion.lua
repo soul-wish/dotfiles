@@ -1,8 +1,5 @@
 return {
 	"olimorris/codecompanion.nvim",
-	opts = {
-		provider = "copilot",
-	},
 	keys = {
 		{
 			"<Leader>an",
@@ -23,11 +20,9 @@ return {
 			mode = { "v" },
 		},
 	},
-	dependencies = {
-		"nvim-lua/plenary.nvim",
-	},
 	config = function()
 		require("codecompanion").setup({
+			provider = "copilot",
 			extensions = {
 				mcphub = {
 					callback = "mcphub.extensions.codecompanion",
@@ -47,4 +42,7 @@ return {
 			},
 		})
 	end,
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+	},
 }
