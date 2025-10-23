@@ -23,6 +23,14 @@ return {
 	config = function()
 		require("codecompanion").setup({
 			provider = "copilot",
+			display = {
+				chat = {
+					auto_scroll = false,
+					window = {
+						width = 0.35,
+					},
+				},
+			},
 			extensions = {
 				mcphub = {
 					callback = "mcphub.extensions.codecompanion",
