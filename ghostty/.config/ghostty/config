@@ -1,6 +1,7 @@
 theme = Rose Pine Moon
 font-family = CaskaydiaCove NFM
 font-size = 16
+window-colorspace = display-p3
 confirm-close-surface = false
 macos-titlebar-style = tabs
 macos-option-as-alt = true
@@ -11,3 +12,4 @@ keybind = ctrl+shift+h=goto_split:left
 keybind = ctrl+shift+j=goto_split:bottom
 keybind = ctrl+shift+k=goto_split:top
 keybind = ctrl+shift+l=goto_split:right
+keybind = shift+enter=text:\x1b\r
