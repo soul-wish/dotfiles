@@ -1,8 +1,11 @@
 return { -- Highlight, edit, and navigate code
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
-	opts = {
-		ensure_installed = {
+	main = "nvim-treesitter",
+	config = function()
+		-- ensure basic parser are installed
+		local parsers = {
+			"bash",
 			"html",
 			"javascript",
 			"typescript",
@@ -16,18 +19,55 @@ return { -- Highlight, edit, and navigate code
 			"svelte",
 			"scss",
 			"gitignore",
-		},
-		-- Autoinstall languages that are not installed
-		auto_install = true,
-		highlight = {
-			enable = true,
-			-- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
-			--  If you are experiencing weird indenting issues, add the language to
-			--  the list of additional_vim_regex_highlighting and disabled languages for indent.
-			additional_vim_regex_highlighting = {},
-		},
-		indent = { enable = true },
-	},
+		}
+		require("nvim-treesitter").install(parsers)
+
+		---@param buf integer
+		---@param language string
+		local function treesitter_try_attach(buf, language)
+			-- check if parser exists and load it
+			if not vim.treesitter.language.add(language) then
+				return
+			end
+			-- enables syntax highlighting and other treesitter features
+			vim.treesitter.start(buf, language)
+
+			-- enables treesitter based folds
+			-- for more info on folds see `:help folds`
+			-- vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+			-- vim.wo.foldmethod = 'expr'
+
+			-- enables treesitter based indentation
+			vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+		end
+
+		local available_parsers = require("nvim-treesitter").get_available()
+		vim.api.nvim_create_autocmd("FileType", {
+			callback = function(args)
+				local buf, filetype = args.buf, args.match
+
+				local language = vim.treesitter.language.get_lang(filetype)
+				if not language then
+					return
+				end
+
+				local installed_parsers = require("nvim-treesitter").get_installed("parsers")
+
+				if vim.tbl_contains(installed_parsers, language) then
+					-- enable the parser if it is installed
+					treesitter_try_attach(buf, language)
+				elseif vim.tbl_contains(available_parsers, language) then
+					-- if a parser is available in `nvim-treesitter` auto install it, and enable it after the installation is done
+					require("nvim-treesitter").install(language):await(function()
+						treesitter_try_attach(buf, language)
+					end)
+				else
+					-- try to enable treesitter features in case the parser exists but is not available from `nvim-treesitter`
+					treesitter_try_attach(buf, language)
+				end
+			end,
+		})
+	end,
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
 		-- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
