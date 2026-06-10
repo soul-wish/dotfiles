@@ -12,8 +12,8 @@ return {
 		{ "<leader>sg", "<cmd>FzfLua live_grep<cr>", desc = "Grep (Root Dir)" },
 		{ "<leader>:", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
 		{ "<leader><space>", "<cmd>FzfLua buffers sort_lastused=true<cr>", desc = "Find Buffers" },
-		{ "<leader>sf", "<cmd>FzfLua files<cr>", desc = "Find Files (Root Dir)" },
-		{ "<leader>fg", "<cmd>FzfLua git_files<cr>", desc = "Find Files (git-files)" },
+		-- { "<leader>sf", "<cmd>FzfLua files<cr>", desc = "Find Files (Root Dir)" },
+		-- { "<leader>fg", "<cmd>FzfLua git_files<cr>", desc = "Find Files (git-files)" },
 		{ "<leader>fr", "<cmd>FzfLua oldfiles<cr>", desc = "Recent" },
 		-- git
 		{ "<leader>gc", "<cmd>FzfLua git_commits<CR>", desc = "Commits" },
