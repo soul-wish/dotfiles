@@ -20,20 +20,20 @@ return {
 			end,
 			desc = "Find files",
 		},
-		-- {
-		-- 	"fg",
-		-- 	function()
-		-- 		require("fff").live_grep()
-		-- 	end,
-		-- 	desc = "LiFFFe grep",
-		-- },
 		{
 			"<leader>sg",
 			function()
-				require("fff").live_grep({ grep = { modes = { "fuzzy", "plain" } } })
+				require("fff").live_grep()
 			end,
-			desc = "Live fuzzy grep",
+			desc = "Live grep",
 		},
+		-- {
+		-- 	"<leader>sg",
+		-- 	function()
+		-- 		require("fff").live_grep({ grep = { modes = { "fuzzy", "plain" } } })
+		-- 	end,
+		-- 	desc = "Live fuzzy grep",
+		-- },
 		-- {
 		-- 	"fc",
 		-- 	function()

@@ -9,7 +9,7 @@ return {
 		{ "<c-j>", "<c-j>", ft = "fzf", mode = "t", nowait = true },
 		{ "<c-k>", "<c-k>", ft = "fzf", mode = "t", nowait = true },
 		-- find
-		{ "<leader>sg", "<cmd>FzfLua live_grep<cr>", desc = "Grep (Root Dir)" },
+		-- { "<leader>sg", "<cmd>FzfLua live_grep<cr>", desc = "Grep (Root Dir)" },
 		{ "<leader>:", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
 		{ "<leader><space>", "<cmd>FzfLua buffers sort_lastused=true<cr>", desc = "Find Buffers" },
 		-- { "<leader>sf", "<cmd>FzfLua files<cr>", desc = "Find Files (Root Dir)" },
