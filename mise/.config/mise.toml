@@ -1,0 +1,8 @@
+[tools]
+lazygit = "latest"
+neovim = "latest"
+gh = "latest"
+fd = "latest"
+fzf = "latest"
+starship = "latest"
+rg = "latest"
