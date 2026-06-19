@@ -60,7 +60,15 @@ return {
 		git = { enabled = true },
 		gitbrowse = { enabled = true },
 		indent = { enabled = true },
-		lazygit = { enabled = true },
+		lazygit = {
+			enabled = true,
+			config = {
+				os = {
+					edit = 'nvim --server "$NVIM" --remote-send "<C-\\><C-N>:q<CR>:e {{filename}}<CR>"',
+					editAtLine = 'nvim --server "$NVIM" --remote-send "<C-\\><C-N>:q<CR>:e {{filename}}<CR>:{{line}}<CR>"',
+				},
+			},
+		},
 		notifier = { enabled = true },
 		picker = { enabled = true },
 		quickfile = { enabled = true },
