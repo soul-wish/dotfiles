@@ -6,3 +6,20 @@ fd = "latest"
 fzf = "latest"
 starship = "latest"
 rg = "latest"
+
+[bootstrap.macos.dock]
+autohide = true
+show_recents = false
+
+[bootstrap.macos.finder]
+show_all_files = true
+show_pathbar = true
+preferred_view_style = "list"
+
+[bootstrap.macos.keyboard]
+key_repeat = 1
+initial_key_repeat = 15
+
+[bootstrap.macos.trackpad]
+tap_to_click = true
+
