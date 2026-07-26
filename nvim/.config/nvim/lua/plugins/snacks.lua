@@ -59,6 +59,7 @@ return {
 		bufdelete = { enabled = true },
 		git = { enabled = true },
 		gitbrowse = { enabled = true },
+		gh = { enabled = true },
 		indent = { enabled = true },
 		lazygit = {
 			enabled = true,
@@ -156,6 +157,34 @@ return {
 				Snacks.words.jump(-vim.v.count1)
 			end,
 			desc = "Prev Reference",
+		},
+		{
+			"<leader>gi",
+			function()
+				Snacks.picker.gh_issue()
+			end,
+			desc = "GitHub Issues (open)",
+		},
+		{
+			"<leader>gI",
+			function()
+				Snacks.picker.gh_issue({ state = "all" })
+			end,
+			desc = "GitHub Issues (all)",
+		},
+		{
+			"<leader>gp",
+			function()
+				Snacks.picker.gh_pr()
+			end,
+			desc = "GitHub Pull Requests (open)",
+		},
+		{
+			"<leader>gP",
+			function()
+				Snacks.picker.gh_pr({ state = "all" })
+			end,
+			desc = "GitHub Pull Requests (all)",
 		},
 	},
 }
