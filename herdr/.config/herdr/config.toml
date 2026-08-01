@@ -2,4 +2,6 @@ onboarding = false
 [theme]
 name = "rose-pine"
 auto_switch = false
-
+[ui]
+pane_gaps=false
+sidebar_start_collapsed=true
