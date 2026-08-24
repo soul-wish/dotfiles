@@ -195,6 +195,7 @@ return {
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			vtsls = {},
 			svelte = {},
+			pyright = {},
 			lua_ls = {
 				settings = {
 					Lua = {
@@ -204,7 +205,6 @@ return {
 					},
 				},
 			},
-
 			solidity_ls = {
 				cmd = { "nomicfoundation-solidity-language-server", "--stdio" },
 				filetypes = { "solidity" },
